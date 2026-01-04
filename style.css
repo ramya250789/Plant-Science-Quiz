@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    /* 🌿 Plant science background with calm animation */
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.85),
+        rgba(255, 255, 255, 0.85)
+    ),
+    url("https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+
+    animation: plantZoom 60s ease-in-out infinite alternate;
+}
+
+/* Ultra-soft background animation */
+@keyframes plantZoom {
+    from { background-size: 110%; }
+    to   { background-size: 115%; }
+}
+
+.container {
+    width: 520px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.94);
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    color: #2e7d32;
+}
+
+p {
+    color: #455a64;
+}
+
+button {
+    padding: 10px 24px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #43a047, #66bb6a);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #2e7d32, #43a047);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1b5e20;
+}
+
+/* OMR style */
+.omr {
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+    cursor: pointer;
+}
+
+.omr input {
+    display: none;
+}
+
+.bubble {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #388e3c;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.omr input:checked + .bubble {
+    background: radial-gradient(circle, #66bb6a, #2e7d32);
+}
+
+.text {
+    font-size: 16px;
+    color: #37474f;
+}
+/* 🎆 Fireworks Overlay */
+.fireworks {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 2000;
+    overflow: hidden;
+}
+
+.fireworks .message {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;        /* ✅ centers text */
+    width: 100%;               /* ✅ prevents left alignment */
+}
+
+.fireworks h1,
+.fireworks h2 {
+    text-align: center;        /* ✅ force center alignment */
+}
+
+
+.fireworks h1 {
+    color: #d32f2f;
+    font-size: 36px;
+}
+
+.fireworks h2 {
+    color: #388e3c;
+}
+
+.burst {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #fff176, #ff9800, transparent);
+    border-radius: 50%;
+    box-shadow:
+        0 0 4px #ffeb3b,
+        0 0 6px #ff9800;
+    animation: explode 2.2s ease-out infinite;
+}
+/* Firework particles */
+.burst::before,
+.burst::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow:
+        20px 0 #ffeb3b,
+        -20px 0 #ff9800,
+        0 20px #ffc107,
+        0 -20px #f44336,
+        14px 14px #ff5722,
+        -14px -14px #ff9800,
+        14px -14px #ffc107,
+        -14px 14px #f44336;
+}
+
+/* Explosion animation */
+@keyframes explode {
+    0% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+

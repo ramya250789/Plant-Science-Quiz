@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Science Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="welcome-screen" class="container">
+    <h1>🌿 Welcome to the Plant Science Quiz 🌿</h1>
+    <p>
+        Test your knowledge and enjoy a calm nature-inspired quiz experience.<br>
+        Stay calm and focused.
+    </p>
+    <button id="startBtn">Start Quiz</button>
+</div>
+
+
+<div id="quiz-screen" class="container hidden">
+
+    <div class="top-bar">
+        <span id="timer">Time: 20</span>
+        <span id="progress"></span>
+    </div>
+
+    <h2 id="question"></h2>
+
+    <form id="options">
+
+        <label class="omr">
+            <input type="radio" name="option" value="0">
+            <span class="bubble"></span>
+            <span class="text"></span>
+        </label>
+
+        <label class="omr">
+            <input type="radio" name="option" value="1">
+            <span class="bubble"></span>
+            <span class="text"></span>
+        </label>
+
+        <label class="omr">
+            <input type="radio" name="option" value="2">
+            <span class="bubble"></span>
+            <span class="text"></span>
+        </label>
+
+        <label class="omr">
+            <input type="radio" name="option" value="3">
+            <span class="bubble"></span>
+            <span class="text"></span>
+        </label>
+
+    </form>
+
+   
+    <button id="nextBtn">Next</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<div id="fireworks" class="fireworks hidden">
+    <div class="message">
+        <h1>🎉 Congratulations! 🎉</h1>
+        <h2>You are a PLANT SCIENCE CHAMPION 🌱🏆🌱</h2>
+    </div>
+
+    <div class="burst"></div>
+    <div class="burst"></div>
+    <div class="burst"></div>
+    <div class="burst"></div>
+</div>
+
+</body>
+</html>
